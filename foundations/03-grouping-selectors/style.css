@@ -1,0 +1,46 @@
+/* 
+* **The first element**: a black background, white text color,
+and a bold font weight
+* **The second element**: a yellow background
+* **Both elements**: a font size of 28px and a list of fonts
+containing `Helvetica` and `Times New Roman`, with
+`sans-serif` as a fallback 
+
+## Desired Outcome
+![desired outcome](./desired-outcome.png)
+
+
+### Self Check
+- Does each element have a unique class name?
+- Did you use the grouping selector for styles that both
+elements share?
+
+- Did you make separate rules for the styles unique to each
+element? */
+.first,
+.second{
+    font-size: 28px;
+    font-family: Helvetica,'Times New Roman', sans-serif;
+}
+.first{ 
+background-color: black;
+color: aliceblue;
+font-weight: bold;
+
+}
+
+
+.second{
+    background-color: orange;
+}
+
+button{
+    container-type: normal;
+}
+
+.box{
+    padding: 5px;
+    border: 5px solid black;
+    display: inline-block;
+    
+}

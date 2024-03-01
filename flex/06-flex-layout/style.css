@@ -1,10 +1,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+/* *{
+  outline: 1px solid red;
+
+} */
+/* 
+### Hints
+- You may want to search something like `CSS remove list bullets`.  We've done this for you in previous examples, but not here. Yay learning.
+- Finding out how to style links in CSS might help you get rid of that pesky underline decoration...
+- We've added `height: 100vh` to the `body`... 
+this makes the body exactly the same height as the viewport.
+ To stick the footer to the bottom you will need to use flex and change the direction to column.
+
+## Desired Outcome
+![desired outcome](./desired-outcome.png)
+
+### Self Check
+
+- The header is at the top of the page, the footer is at the bottom, and they stay in place if you resize your screen.
+- The header and footer have padding.
+- The links in the header and footer are pushed to either side.
+- There is space between the links in the header and footer.
+- The footer has a light gray background (`#eeeeee`).
+- The logo, input and buttons are centered in the screen.
+- The buttons have an appropriate amount of padding.
+- There is space between the logo, input and buttons. 
+ this removes the dots on the list items
+list-style-type: none;
+ this removes the line under the links
+ text-decoration: none;
+*/
+
 body {
+  /* display: flex; */
   height: 100vh;
+  /* display: flex;
+  flex-flow: column;
+  justify-content: space-between; */
   margin: 0;
   overflow: hidden;
   font-family: Roboto, sans-serif;
+
 }
 
 img {
@@ -16,6 +52,7 @@ button {
   border: none;
   border-radius: 8px;
   background: #eee;
+  
 }
 
 input {
@@ -24,4 +61,53 @@ input {
   padding: 8px 24px;
   width: 400px;
   margin-bottom: 16px;
+}
+
+.header, .footer{
+  /* list-style-type: none;
+  text-decoration: none; */
+  display: flex;
+  justify-content: space-between;
+  /* align-items:st; */
+  margin: 15px 5px 0px 5px;
+  padding: 0px;
+
+}
+
+
+.footer{
+  /* margin: 15px 5px 0px 5px; */
+  /* background-color: grey; */
+  background-color: rgb(233, 231, 231);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.left-links, .right-links{
+  display: flex;
+  /* justify-content: space-between; */
+  list-style-type: none;
+  margin:  0px 10px;
+  padding: 0px;
+  gap: 10%;
+  
+}
+
+.content{
+  display: flex;
+  padding-top: 150px;
+  flex-direction: column;
+  justify-content: center;
+align-items: center;
+/* padding:50px ;
+margin-bottom:50px; */
+/* min-height: 60%; */
+}
+
+
+a{
+  text-decoration: none;
+  color: black;
 }
